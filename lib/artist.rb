@@ -27,13 +27,7 @@ end
 
 def self.find_or_create_by_name(name)
   found = @@all.find {|artist|  artist.name == name}
-  #found ? found : Artist.new(name)
-  if found
-    found
-  else
-    Artist.new(name)
-  end
-
+  found ? found : Artist.new(name)
 end
 
 def print_songs
